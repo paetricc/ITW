@@ -83,7 +83,7 @@ section {
 
 
 #about {
-    padding-bottom: 170px;
+    padding-bottom: 130px;
 }
 
 section h3 {
@@ -144,9 +144,7 @@ td {
     display: inline;
 }
 
-#exercises img {
-    margin-bottom: -5px;
-}
+
 
 footer {
     background-image: url(img/footer_bg.gif);
