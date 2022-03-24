@@ -1,0 +1,697 @@
+/*
+ * Login: xbartu11
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu (napr. bubliny v sekci #refs)
+ */
+
+body {
+    margin: 0;
+    font-family: 'PT Sans';
+    color: #898989;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+h2 {
+    font-size: 40px;
+    color: black;
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: #898989;
+}
+
+.content a:hover {
+    color: #bfbfbf;
+}
+
+header {
+    background-image: url(./../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    height: 100vh;
+}
+
+.content {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    min-width: 768px;
+    margin: auto;
+}
+
+#logo {
+    font-family: 'Special Elite';
+    font-size: 25px;
+    display: inline;
+    float: left;
+    width: 50%;
+}
+
+#logo span a:hover {
+    color: #f7f7f7;
+}
+
+#logo a:link,
+#logo a:visited {
+    color: steelblue;
+}
+
+#navigation {
+    float: left;
+    width: 50%;
+}
+
+#navigation ul {
+    margin: 0;
+    white-space: nowrap;
+    padding: 0;
+    /* Pro odstraneni mezer mezi li */
+    font-size: 0;
+}
+
+#navigation ul li {
+    display: inline-block;
+    border: 1px solid transparent;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+#navigation ul li:hover {
+    border: 1px solid #bfbfbf;
+    transition: all .5s ease;
+}
+
+#navigation ul li a {
+    padding: 5px 15px;
+    height: 100%;
+    display: block;
+}
+
+#contacts {
+    padding-top: 10px;
+    display: inline;
+    float: left;
+    text-align: right;
+    width: 50%;
+    height: 42.5px;
+}
+
+#contacts span:not(:last-child) {
+    margin-right: 10px;
+}
+
+#networks {
+    float: right;
+    text-align: right;
+    width: 50%;
+    height: 34.09px;
+}
+
+#networks i {
+    font-size: 1.7em;
+}
+
+#networks i:hover {
+    color: #f7f7f7;
+}
+
+i {
+    color: steelblue;
+    margin-right: 5px;
+}
+
+#header-menu {
+    padding-top: 10px;
+}
+
+#header-title {
+    position: relative;
+    top: 35vh;
+    float: left;
+    padding-left: 20px;
+}
+
+#header-title h1 {
+    font-size: 64px;
+    padding-bottom: 20px;
+    color: #f7f7f7;
+    white-space: nowrap;
+}
+
+#get-started {
+    font-size: larger;
+    outline: 2px solid #f7f7f7;
+    border-radius: 17px;
+    display: inline-block;
+}
+
+#get-started:hover {
+    outline: 2px solid steelblue;
+}
+
+#get-started a {
+    display: block;
+    padding: 20px;
+    height: 100%;
+    color: #f7f7f7;
+}
+
+#get-started a:hover {
+    background-color: steelblue;
+    border-radius: 15px;
+    transition: all .5s ease;
+}
+
+
+/*       START OF SERVICES       */
+
+#services {
+    text-align: center;
+}
+
+#services h2 {
+    text-transform: uppercase;
+}
+
+#services div div {
+    margin: auto;
+    width: 700px;
+    font-size: 0;
+}
+
+#services div div div {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#services div div div:nth-child(odd) {
+    margin-right: 40px;
+}
+
+.services-column {
+    display: inline-block;
+}
+
+.services-card {
+    position: relative;
+    box-sizing: border-box;
+    padding: 15px;
+    color: #bfbfbf;
+    box-shadow: #bfbfbf 0px 3px 10px;
+    border-radius: 5px;
+}
+
+.services-card img,
+h3 {
+    transition: all 0.5s;
+}
+
+.services-card h3 {
+    display: inline-block;
+    padding-top: 70px;
+    margin: 0;
+}
+
+.services-card p {
+    font-size: 14px;
+}
+
+.services-card:hover {
+    box-shadow: steelblue 0px 3px 10px;
+}
+
+.services-card:hover h3 {
+    color: steelblue;
+}
+
+.services-card:hover img {
+    background-color: steelblue;
+}
+
+.services-card:hover img+img {
+    display: block;
+}
+
+.services-card img:nth-child(even) {
+    display: none;
+}
+
+.services-card img {
+    position: absolute;
+    width: 50px;
+    padding: 5px;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    left: 40.9%;
+}
+
+
+/*      END OF SERVICES       */
+
+
+/*       START OF ABOUT       */
+
+#about {
+    background-color: #f7f7f7;
+}
+
+.about-item h2:nth-child(even) {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.about-item p {
+    text-align: justify;
+}
+
+.about-item img {
+    width: 40%;
+    margin-bottom: 40px;
+    transition: all .5s ease;
+}
+
+.about-item:not(:last-child) {
+    padding-bottom: 50px;
+}
+
+.about-item img:hover {
+    width: 50%;
+}
+
+.about-item:nth-child(odd) img {
+    float: left;
+    margin-right: 80px;
+}
+
+.about-item:nth-child(even) img {
+    float: right;
+    margin-left: 80px;
+}
+
+
+/*        END OF ABOUT          */
+
+
+/*         START OF TEAM       */
+
+#team {
+    text-align: center;
+}
+
+#team h2 {
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+#team .content {
+    font-size: 0;
+}
+
+.team-card {
+    width: 23%;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: #bfbfbf 0px 3px 10px;
+    transition: all .5s ease;
+}
+
+.team-card:hover {
+    box-shadow: steelblue 0px 3px 10px;
+}
+
+.team-card:hover h3 {
+    color: steelblue;
+}
+
+.team-card h4 {
+    font-size: 16px;
+}
+
+.team-card p {
+    color: #bfbfbf;
+    font-size: 14px;
+}
+
+.team-card:not(:last-child) {
+    margin-right: 20px;
+}
+
+.team-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/*          END OF TEAM        */
+
+
+/*        START OF STATS       */
+
+#stats {
+    border-top: 1px dashed #898989;
+    text-align: center;
+}
+
+#stats .content {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#stats h3 {
+    color: #f7f7f7;
+}
+
+#stats p {
+    font-size: 14px;
+}
+
+.stats-card {
+    background-color: #4d4d4d;
+    max-width: 300px;
+    border-radius: 5px;
+    width: 100%;
+    transition: all .5s ease;
+    color: #bfbfbf;
+}
+
+.stats-card:hover {
+    background-color: steelblue;
+}
+
+.stats-card i {
+    margin: auto;
+    width: 32px;
+    margin-top: -25px;
+    display: block;
+    font-size: 32px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+
+/*         END OF OF STATS        */
+
+
+/*         START OF PRICE         */
+
+#price {
+    background-color: #f7f7f7;
+}
+
+#price h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+#price table {
+    width: 80%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+#price table th {
+    color: black;
+    text-align: left;
+}
+
+#price table tr {
+    transition: all .5s ease;
+}
+
+#price table tbody tr:hover {
+    background-color: white;
+    color: steelblue;
+}
+
+#price table th,
+td {
+    padding: 20px;
+}
+
+#price table tr:not(:first-child) th,
+td {
+    border-top: 1px dotted steelblue;
+    border-bottom: 1px dotted steelblue;
+}
+
+#price table ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+#price table li {
+    padding-bottom: 5px;
+}
+
+#price table ul li:first-child {
+    list-style-type: none;
+    font-weight: bold;
+    text-align: left;
+    margin-left: -20px;
+}
+
+#price table button {
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid steelblue;
+    background-color: transparent;
+    transition: all .5s ease;
+}
+
+#price table button:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+
+/*         END OF PRICE           */
+
+
+/*         START OF REFS           */
+
+#refs {
+    border-bottom: 1px dashed black;
+}
+
+#refs .content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.refs-card {
+    max-width: 400px;
+    width: 50%;
+}
+
+#refs blockquote {
+    background-color: #4d4d4d;
+    text-align: justify;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    display: block;
+    color: #f7f7f7;
+    padding-left: 50px;
+    transition: all .5s ease;
+}
+
+#refs blockquote:hover span::before {
+    color: #f7f7f7;
+}
+
+#refs blockquote span {
+    quotes: "ʺ" "ʺ";
+}
+
+#refs blockquote span::before {
+    position: absolute;
+    content: open-quote;
+    font-size: 5em;
+    margin-left: -0.55em;
+    margin-top: -0.25em;
+    color: steelblue
+}
+
+#refs blockquote:hover {
+    background-color: steelblue;
+}
+
+#refs blockquote::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #4d4d4d;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #4d4d4d;
+    border-bottom: 10px solid transparent;
+    left: 50px;
+    bottom: -19px;
+}
+
+#refs figure {
+    padding-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    gap: 20px
+}
+
+#refs img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+#refs h3 {
+    color: #bfbfbf;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+
+/*          END OF REFS            */
+
+
+/*        START OF CONTACT         */
+
+#contact {
+    padding: 40px 0;
+}
+
+#contact .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-bottom: 20px;
+}
+
+#map {
+    height: 400px;
+}
+
+::placeholder {
+    color: steelblue;
+    opacity: 1;
+}
+
+#contact form {
+    display: grid;
+    grid-template: "jmeno email" min-content " predmet predmet" min-content "text text" min-content "button button" min-content;
+    align-content: center;
+}
+
+#contact form>*:not(:last-child) {
+    padding: 10px;
+    outline: transparent;
+    border-radius: 5px;
+    border: 1px solid steelblue;
+    box-shadow: none;
+    color: steelblue;
+}
+
+#contact-email:invalid:focus {
+    border: 1px solid red;
+    box-shadow: 0 0 5px #a15d49;
+    color: red;
+}
+
+#contact form :focus {
+    border: 1px solid green;
+    box-shadow: 0 0 5px #49a150;
+}
+
+#contact-name {
+    grid-column-start: 1;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    grid-area: jmeno;
+}
+
+#contact-email {
+    grid-area: email;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+#contact-subject {
+    grid-column-start: 1;
+    display: block;
+    margin-bottom: 20px;
+    grid-area: predmet;
+}
+
+#contact-message {
+    display: block;
+    margin-bottom: 20px;
+    grid-area: text;
+}
+
+#contact-submit {
+    padding: 10px;
+    border-radius: 5px;
+    border-color: steelblue;
+    display: block;
+    margin: auto;
+    width: 300px;
+    background-color: steelblue;
+    color: #f7f7f7;
+    transition: all .5s ease;
+    grid-area: button;
+}
+
+#contact-submit:hover {
+    background-color: green;
+    border: 2px solid green;
+}
+
+
+/*         END OF CONTACT          */
+
+#footer {
+    padding: 40px 0;
+    background-color: black;
+}
+
+#footer a {
+    float: right;
+    color: steelblue;
+}
