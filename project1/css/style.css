@@ -54,6 +54,7 @@ header {
     background-size: cover;
     background-position: center;
     min-height: 400px;
+    /*Na cely viewport*/
     height: 100vh;
 }
 
@@ -65,12 +66,19 @@ header {
     margin: auto;
 }
 
+i {
+    color: steelblue;
+    margin-right: 5px;
+}
+
+
+/*        START OF HEADER          */
+
 #logo {
+    grid-area: logo;
     font-family: 'Special Elite';
     font-size: 25px;
     display: inline;
-    float: left;
-    width: 50%;
 }
 
 #logo span a:hover {
@@ -83,8 +91,7 @@ header {
 }
 
 #navigation {
-    float: left;
-    width: 50%;
+    grid-area: navigation;
 }
 
 #navigation ul {
@@ -93,6 +100,14 @@ header {
     padding: 0;
     /* Pro odstraneni mezer mezi li */
     font-size: 0;
+}
+
+#header-menu {
+    padding-top: 10px;
+    display: grid;
+    /*Rozlozeni 2x2*/
+    grid-template: "logo contacts" min-content "navigation networks" min-content;
+    row-gap: 10px;
 }
 
 #navigation ul li {
@@ -115,23 +130,21 @@ header {
 }
 
 #contacts {
-    padding-top: 10px;
+    grid-area: contacts;
     display: inline;
-    float: left;
     text-align: right;
-    width: 50%;
-    height: 42.5px;
 }
+
+
+/*U posledni polozky nechceme odsazeni*/
 
 #contacts span:not(:last-child) {
     margin-right: 10px;
 }
 
 #networks {
-    float: right;
     text-align: right;
-    width: 50%;
-    height: 34.09px;
+    grid-area: networks;
 }
 
 #networks i {
@@ -140,15 +153,6 @@ header {
 
 #networks i:hover {
     color: #f7f7f7;
-}
-
-i {
-    color: steelblue;
-    margin-right: 5px;
-}
-
-#header-menu {
-    padding-top: 10px;
 }
 
 #header-title {
@@ -188,6 +192,9 @@ i {
     border-radius: 15px;
     transition: all .5s ease;
 }
+
+
+/*        END OF HEADER          */
 
 
 /*       START OF SERVICES       */
@@ -259,7 +266,10 @@ h3 {
     display: block;
 }
 
-.services-card img:nth-child(even) {
+
+/*Zadni obrazek se skryje (pouze pri najeti mysi se zobrazi)*/
+
+.services-card img:last-child {
     display: none;
 }
 
@@ -282,7 +292,7 @@ h3 {
     background-color: #f7f7f7;
 }
 
-.about-item h2:nth-child(even) {
+.about-item h2 {
     font-size: 32px;
     margin-bottom: 30px;
 }
@@ -305,10 +315,16 @@ h3 {
     width: 50%;
 }
 
+
+/*Kazdy lichy prispevek bude vlevo*/
+
 .about-item:nth-child(odd) img {
     float: left;
     margin-right: 80px;
 }
+
+
+/*Kazdy sudy prispevek bude vpravo*/
 
 .about-item:nth-child(even) img {
     float: right;
@@ -329,6 +345,9 @@ h3 {
     text-transform: uppercase;
     margin-bottom: 50px;
 }
+
+
+/*Odstraneni prebytecne mezery*/
 
 #team .content {
     font-size: 0;
@@ -358,6 +377,9 @@ h3 {
     color: #bfbfbf;
     font-size: 14px;
 }
+
+
+/*Posledni nechceme odsadit*/
 
 .team-card:not(:last-child) {
     margin-right: 20px;
@@ -437,6 +459,7 @@ h3 {
 #price table {
     width: 80%;
     margin: auto;
+    /*Ohraniceni bude rozdeleno*/
     border-collapse: separate;
     border-spacing: 0 20px;
 }
@@ -460,8 +483,7 @@ td {
     padding: 20px;
 }
 
-#price table tr:not(:first-child) th,
-td {
+#price table tr td {
     border-top: 1px dotted steelblue;
     border-bottom: 1px dotted steelblue;
 }
@@ -474,6 +496,9 @@ td {
 #price table li {
     padding-bottom: 5px;
 }
+
+
+/*Prvni polozku posuneme do leva a odstranime styl seznamu*/
 
 #price table ul li:first-child {
     list-style-type: none;
@@ -531,6 +556,9 @@ td {
     color: #f7f7f7;
 }
 
+
+/* Nepodarilo se mi najit stejne uvozovky*/
+
 #refs blockquote span {
     quotes: "ʺ" "ʺ";
 }
@@ -541,24 +569,39 @@ td {
     font-size: 5em;
     margin-left: -0.55em;
     margin-top: -0.25em;
-    color: steelblue
+    color: steelblue;
 }
 
-#refs blockquote:hover {
+#refs .refs-card:hover blockquote {
     background-color: steelblue;
 }
 
+#refs .refs-card:hover blockquote span::before {
+    color: #f7f7f7;
+    transition: all .5s ease;
+}
+
+#refs .refs-card:hover blockquote::before {
+    border-left-color: steelblue;
+    border-top-color: steelblue;
+}
+
+
+/*Pomoci spojeni dvou trojuhelniku dosahneme jednoho vetsiho*/
+
 #refs blockquote::before {
     content: "";
-    width: 0px;
-    height: 0px;
     position: absolute;
+    /*Prvni*/
     border-left: 10px solid #4d4d4d;
     border-right: 10px solid transparent;
+    /*Druhy*/
     border-top: 10px solid #4d4d4d;
     border-bottom: 10px solid transparent;
+    /*Posuneme na pozici*/
     left: 50px;
-    bottom: -19px;
+    bottom: -20px;
+    transition: all .5s ease;
 }
 
 #refs figure {
@@ -614,10 +657,16 @@ td {
 }
 
 #contact form {
+    /*template pro grid*/
     display: grid;
     grid-template: "jmeno email" min-content " predmet predmet" min-content "text text" min-content "button button" min-content;
     align-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
 }
+
+
+/*Pro vsechny krome posledniho chceme nastavit shadow apod.(posledni je tlacitko)*/
 
 #contact form>*:not(:last-child) {
     padding: 10px;
@@ -628,11 +677,17 @@ td {
     color: steelblue;
 }
 
+
+/*pokud je email nevalidni*/
+
 #contact-email:invalid:focus {
     border: 1px solid red;
     box-shadow: 0 0 5px #a15d49;
     color: red;
 }
+
+
+/*Jsme ve formulari*/
 
 #contact form :focus {
     border: 1px solid green;
@@ -640,28 +695,20 @@ td {
 }
 
 #contact-name {
-    grid-column-start: 1;
-    margin-bottom: 20px;
-    margin-right: 10px;
     grid-area: jmeno;
 }
 
 #contact-email {
     grid-area: email;
-    margin-left: 10px;
-    margin-bottom: 20px;
 }
 
 #contact-subject {
-    grid-column-start: 1;
     display: block;
-    margin-bottom: 20px;
     grid-area: predmet;
 }
 
 #contact-message {
     display: block;
-    margin-bottom: 20px;
     grid-area: text;
 }
 
