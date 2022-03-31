@@ -3,6 +3,17 @@ document.getElementById('hamburger').addEventListener('click', hide);
 
 window.addEventListener('resize', resizing);
 
+var navbar = document.getElementById("navbar");
+var menu = document.getElementById("ul");
+
+window.onscroll = function() {
+    if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+
 function hide() {
     var list = document.getElementsByClassName('list');
     for (var i = 1; i < list.length; i++) {
@@ -34,7 +45,6 @@ function resizing() {
     if (width > 767 && width < 991) {
         var list = document.getElementsByClassName('list');
         for (var i = 1; i < list.length; i++) {
-            console.log(i);
             list[i].removeAttribute('style');
         }
         var spanik = document.getElementsByClassName('spanik');
