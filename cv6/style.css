@@ -5,8 +5,7 @@
         font-family: 'Ubuntu', sans-serif;
         margin: 0;
         padding: 0;
-        max-width: 100%;
-        overflow-x: hidden;
+        min-width: 400px;
     }
     
     header {
@@ -40,7 +39,6 @@
         position: absolute;
         top: 0;
         right: 0;
-        padding: 1rem;
         display: none;
         background-color: #b15e23;
     }
@@ -48,12 +46,13 @@
     nav a {
         color: white;
         display: block;
+        padding: 1rem;
     }
     
     nav ul {
         max-width: 1200px;
         margin: auto;
-        padding: 0;
+        padding: 0 1rem;
     }
     
     nav.sticky {
@@ -64,13 +63,21 @@
     
     nav ul li {
         display: inline-block;
-        padding: 1rem 0.5rem;
         text-align: center;
     }
     
     nav ul li span {
         padding-left: 1ch;
         display: inline-block;
+    }
+    
+    nav ul li:first-child {
+        padding-left: 1rem;
+        margin-left: -1rem;
+    }
+    
+    nav ul li:first-child a {
+        padding-left: 0;
     }
     
     nav ul li:hover {
@@ -104,7 +111,7 @@
     }
     
     .head {
-        box-sizing: border-box;
+        display: grid;
         background-image: linear-gradient(white, lightgray);
     }
     
@@ -239,6 +246,14 @@
         padding-bottom: 4rem;
     }
     
+    #about p {
+        padding: 1rem 0;
+    }
+    
+    #about h2 {
+        padding: 0;
+    }
+    
     .main {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -266,12 +281,6 @@
         object-fit: none;
     }
     
-    @media screen and (min-width: 768px) {
-        nav ul li:not(:first-child) {
-            display: inline-block !important;
-        }
-    }
-    
     @media screen and (max-width: 991px) {
         .column,
         .main {
@@ -282,9 +291,6 @@
         }
         nav ul li:not(:first-child) span {
             display: none;
-        }
-        nav ul li:not(:first-child) {
-            padding: 1rem;
         }
     }
     
@@ -306,6 +312,9 @@
         #hamburger:hover {
             background-color: #3c1f0a;
         }
+        nav ul {
+            padding: 0;
+        }
         nav ul li:not(:first-child) {
             display: none;
             text-align: left;
@@ -317,6 +326,6 @@
             display: inline-block;
             width: 90%;
             text-align: left;
-            padding-left: 1rem;
+            padding-left: 2rem;
         }
     }
