@@ -4,7 +4,9 @@
         background-color: white;
         font-family: 'Ubuntu', sans-serif;
         margin: 0;
-        min-width: 375px;
+        padding: 0;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     
     header {
@@ -139,7 +141,7 @@
     
     #exercises {
         background-image: linear-gradient(to right, lightgray, white);
-        padding-left: 1rem;
+        padding: 0 1rem;
     }
     
     #exercises h3 {
@@ -165,6 +167,7 @@
     }
     
     #exercises .ex {
+        padding-right: 0;
         display: grid;
         grid-template-areas: "h h" "img p";
         align-items: end;
@@ -306,7 +309,7 @@
         }
         nav ul li:first-child {
             display: inline-block;
-            width: 100%;
+            width: 90%;
             text-align: left;
             padding-left: 1rem;
         }
