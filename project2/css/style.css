@@ -1,0 +1,408 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+a {
+    text-decoration: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    position: relative;
+    padding: 1em;
+}
+
+a:link,
+a:visited {
+    color: aliceblue;
+}
+
+i {
+    font-size: 40px;
+}
+
+/***************************/
+/*  Zacátek úvodní stránky */
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+header {
+    background-image: url(./../img/happyStudent.jpg);
+    background-color: #c89666;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    height: 100vh;
+}
+
+#navbar ul a::before {
+    transform: scaleX(0);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: aliceblue;
+    transform-origin: bottom;
+    transition: transform .2s linear;
+    left: 0;
+    bottom: 0;
+}
+
+#navbar a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom;
+}
+
+#navbar {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    transition: all .2s linear;
+}
+
+nav ul {
+    font-size: 0;
+    white-space: nowrap;
+    padding: 0;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    border: 1px solid transparent;
+    font-size: 2.4vh;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 1em 0;
+}
+
+#hamburger {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2.3vh;
+    padding-top: 2vh;
+}
+
+#hamburger a:hover {
+    color: lightblue;
+}
+
+#title {
+    display: block;
+    position: relative;
+    top: 66vh;
+    padding: 1em 1em 1em 10vh;
+    font-size: 2vw;
+    float: left;
+    background-color: #112D32;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 0 20px 20px 0;
+    transition: ease all .5s;
+}
+
+#title a {
+    padding: 1em;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+/* Konec úvodní stránky */
+/************************/
+
+
+.content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 3rem 1rem;
+}
+
+.section:nth-child(even) {
+    background-color: gray;
+}
+
+/***************************/
+/*   Zacátek sekce about   */
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+#about .content {
+    display: grid;
+    grid-template-areas: "img text";
+    align-items: center;
+}
+
+#about p {
+    grid-area: text;
+}
+
+#about #about_img {
+    grid-area: img;
+}
+
+#about_img img {
+    display: block;
+    margin: auto;
+    width: 75%;
+    border-radius: 20px;
+    transition: all .5s ease;
+}
+
+#about_img img:hover {
+    width: 90%;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+/*   Konec sekce about  */
+/************************/
+
+/***************************/
+/* Zacátek sekce education */
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+#education .content {
+    display: grid;
+    grid-template-areas: "head head" "text1 img" "text2 text3";
+    align-items: center;
+    justify-items: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+#education h2 {
+    grid-area: head;
+}
+
+#education #primarySchool {
+    grid-area: text1;
+}
+
+#education #secondarySchool {
+    grid-area: text2;
+}
+
+#education #college {
+    grid-area: text3;
+}
+
+#education img {
+    display: block;
+    margin: auto;
+    width: 75%;
+    transition: all .5s ease;
+}
+
+#education img:hover {
+    width: 90%;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+/* Konec sekce education */
+/*************************/
+
+/************************/
+/* Zacátek sekce skills */
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+#skills .content {
+    display: grid;
+    grid-template-areas: "head" "text";
+    justify-items: center;
+}
+
+#languages {
+    display: grid;
+    grid-template-areas: "text text text";
+    column-gap: 1rem;
+}
+
+.lang-item {
+    padding-bottom: 1rem;
+}
+
+.lang-item i {
+    float: left;
+    padding: .5rem;
+    transition: all .3s linear;
+}
+
+progress {
+    position: relative;
+    width: 300px;
+}
+
+progress::after, progress::before {
+    content: "";
+    height: 50%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+progress::after {
+    top: 4px;
+    left: 4px;
+}
+
+progress::before {
+    width: 100%;
+    background: #12343b;
+    padding: 4px;
+    transition: all .2s ease-in-out;
+}
+
+progress:hover::before {
+    background: steelblue;
+}
+
+/***
+    Jednotlivé nastavení barev hoverů ikon a progresových jezdců jazyků
+    se nachází ve stylovém předpisu languages.css, kvůli lepší přehlednosti.
+***/
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+/* Konec sekce skills */
+/**********************/
+
+/************************/
+/* Zacátek sekce films  */
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+#films .content {
+    display: grid;
+    grid-template-areas: "head head" "icon icon";
+    justify-items: center;
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+#films h2 {
+    grid-area: head;
+}
+
+#films i {
+    grid-area: icon;
+}
+
+.film {
+    text-align: center;
+}
+
+#contact_icons {
+    padding: 1rem;
+}
+
+#contact_icons i:not(:last-child) {
+    padding-right: 15px;
+}
+
+.film img {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    transition: all .2s ease-in;
+}
+
+/* Simulace nadzvednutí plakátu */
+.film img:hover {
+    width: 91%;
+    box-shadow: #bfbfbf 15px 15px 15px;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+/* Konec sekce films  */
+/**********************/
+
+
+/***************************/
+/* Zacátek sekce contacts  */
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+footer {
+    background-color: #c89666;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a:hover {
+    color: #112D32;
+}
+
+footer p i {
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+/* Konec sekce contacts  */
+/*************************/
+
+@media screen and (max-width: 1023px) {
+    #hamburger {
+        display: block;
+        color: aliceblue;
+    }
+
+    #languages {
+        grid-template-areas: "text text";
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li:not(:first-child) {
+        display: none;
+    }
+
+    html {
+        min-width: 400px;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    nav ul li {
+        font-size: 19px;
+    }
+
+    #hamburger {
+        padding-top: 10px;
+        padding-right: 10px;
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #title {
+        font-size: 2vh;
+    }
+    #about .content {
+        grid-template-areas: "img" "text";
+    }
+
+    #education .content {
+        grid-template-areas: "head" "text1" "text2" "img" "text3";
+    }
+
+    #films .content {
+        grid-template-areas: "head" "icon";
+    }
+    #languages {
+        grid-template-areas: "text";
+    }
+}

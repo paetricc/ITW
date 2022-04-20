@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fictional student</title>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/languages.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src="https://kit.fontawesome.com/86d88b8c50.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+
+<body id="home">
+<nav id="navbar">
+    <ul id="ul">
+        <li><a href="#home"><span class="spanik">HOME</span></a></li>
+        <li id="li_about" class="list"><a class="nav-link" href="#about"><span class="spanik">ABOUT</span></a></li>
+        <li id="li_lectures" class="list"><a class="nav-link" href="#education"><span
+                class="spanik">EDUCATION</span></a></li>
+        <li id="li_results" class="list"><a class="nav-link" href="#skills"><span class="spanik">SKILLS</span></a></li>
+        <li id="li_exercises" class="list"><a class="nav-link" href="#hobbies"><span class="spanik">HOBBIES</span></a>
+        </li>
+        <li id="li_contact" class="list"><a class="nav-link" href="#films"><span class="spanik">FILMS</span></a></li>
+        <li id="li_related" class="list"><a class="nav-link" href="#contact"><span class="spanik">CONTACT</span></a>
+        </li>
+    </ul>
+    <div id="hamburger"><a><i class="fa-solid fa-bars"></i></a></div>
+</nav>
+<header>
+    <section id="header">
+        <h1 id="title"><a href="#title">A happy, therefore fictional student</a></h1>
+    </section>
+</header>
+<main>
+    <section class="section" id="about">
+        <div class="content">
+            <div>
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum ullamcorper
+                    ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id dolor. Nulla
+                    accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.
+                    Integer pellentesque quam vel velit. Nunc dapibus tortor vel mi dapibus sollicitudin. Duis aute
+                    irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. In convallis.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aenean
+                    fermentum risus id tortor. Duis pulvinar. Etiam egestas wisi a erat. Integer rutrum, orci vestibulum
+                    ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim.</p>
+            </div>
+            <div id="about_img">
+                <img src="img/smile.jpg" alt="smile"/>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="education">
+        <div class="content">
+            <h2>Education</h2>
+            <div id="primarySchool" class="edu-item">
+                <h3>Primary School</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                    ullamcorper
+                    ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id dolor.
+                    Nulla
+                    accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel
+                    leo.
+                    Integer pellentesque quam vel velit.</p>
+            </div>
+            <div id="secondarySchool" class="edu-row">
+                <h3>Secondary School</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                    ullamcorper
+                    ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id dolor.
+                    Nulla
+                    accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel
+                    leo.
+                    Integer pellentesque quam vel velit.</p>
+            </div>
+            <div id="college" class="edu-row">
+                <h3>College</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                    ullamcorper
+                    ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id dolor.
+                    Nulla
+                    accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel
+                    leo.
+                    Integer pellentesque quam vel velit.</p>
+            </div>
+            <div>
+                <img src="img/vut.jpg" alt="VUT"/>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="skills">
+        <div class="content">
+            <h2>Skills</h2>
+            <div id="languages">
+                <!--
+                    Do každěho elementu progress doplníme hodnoty value a max, protože bez těchto hodnot bude defaultně
+                    nastaven progress tak, že se bude postup pořád pohybovat. Nastavením těchto hodnot tedy pozastavíme tento
+                    jev a ušetříme výkon prohlížeče
+                -->
+                <div class="lang-item">
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>HTML5</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-html">75%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="fa-brands fa-java"></i>
+                    <h2>Java</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-java">85%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="fa-brands fa-js"></i>
+                    <h2>Java Script</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-js">25%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-python">40%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="fa-brands fa-php"></i>
+                    <h2>PHP</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-php">45%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-git-plain"></i>
+                    <h2>Git</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-git">65%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-csharp-plain"></i>
+                    <h2>C#</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-csharp">35%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-cplusplus-plain"></i>
+                    <h2>C++</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-cpp">30%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-c-plain"></i>
+                    <h2>C</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-c">70%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-azure-plain"></i>
+                    <h2>Azure</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-azure">20%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-bash-plain"></i>
+                    <h2>Bash</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-bash">80%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-cmake-plain"></i>
+                    <h2>CMake</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-cmake">15%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-css3-plain"></i>
+                    <h2>CSS3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-css">75%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-dotnetcore-plain"></i>
+                    <h2>.NET Core</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-dotnet">30%</progress>
+                </div>
+                <div class="lang-item">
+                    <i class="devicon-markdown-original"></i>
+                    <h2>MarkDown</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer rutrum, orci vestibulum
+                        ullamcorper
+                        ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id
+                        dolor.</p>
+                    <progress id="lang-md">90%</progress>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="hobbies">
+        <div class="content">
+            <ul>
+                <li>Hobby1</li>
+                <li>Hobby2</li>
+                <li>Hobby3</li>
+                <li>Hobby4</li>
+            </ul>
+            <div><h2>Hobby1</h2></div>
+            <div><h2>Hobby2</h2></div>
+            <div><h2>Hobby3</h2></div>
+            <div><h2>Hobby4</h2></div>
+        </div>
+    </section>
+    <section class="section" id="films">
+        <div class="content">
+            <h2>Top 5 films</h2>
+            <i class="fa-solid fa-film"></i>
+            <div class="film">
+                <h3>The Shawshank Redemption, 1994</h3>
+                <img src="img/utek.jpg" alt="The Shawshank Redemption"/>
+            </div>
+            <div class="film">
+                <h3>The Dark Knight, 2008</h3>
+                <img src="img/batman.jpg" alt="The Dark Knight"/>
+            </div>
+            <div class="film">
+                <h3>The Godfather, 1972</h3>
+                <img src="img/kmotr.jpg" alt="The Godfather"/>
+            </div>
+            <div class="film">
+                <h3>The Godfather: Part II, 1974</h3>
+                <img src="img/kmotr2.jpg" alt="The Godfather: Part II"/>
+            </div>
+            <div class="film">
+                <h3>12 Angry Men, 1957</h3>
+                <img src="img/muzi.jpg" alt="12 Angry Men"/>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="contact">
+    <section class="section">
+        <div class="content">
+            <div id="contact_icons">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <p><i class="fa-solid fa-copyright"></i>Tomáš Bártů, For educational purposes only.</p>
+        </div>
+    </section>
+</footer>
+<script type="text/javascript" src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+#lang-html::after {
+    width: 75%;
+    background: #a4c073;
+}
+
+.fa-html5:hover {
+    color: #FF0026;
+}
+
+#lang-java::after {
+    width: 85%;
+    background: #84bb7b;
+}
+
+.fa-java:hover {
+    color: #7592FC;
+}
+
+#lang-js::after {
+    width: 25%;
+    background: #e9a268;
+}
+
+.fa-js:hover {
+    color: #F5EA12;
+}
+
+#lang-python::after {
+    width: 40%;
+    background: #e9b861;
+}
+
+.fa-python:hover {
+    color: #24699A;
+}
+
+#lang-php::after {
+    width: 45%;
+    background: #f3c563;
+}
+
+.fa-php:hover {
+    color: #7F71B4;
+}
+
+#lang-git::after {
+    width: 65%;
+    background: #c4c56d;
+}
+
+.devicon-git-plain:hover {
+    color: #FF0033;
+}
+
+#lang-csharp::after {
+    width: 35%;
+    background: #e6ad61;
+}
+
+.devicon-csharp-plain:hover {
+    color: #79007C;
+}
+
+#lang-cpp::after {
+    width: 30%;
+    background: #ecac67;
+}
+
+.devicon-cplusplus-plain:hover {
+    color: #0076CE;
+}
+
+#lang-c::after {
+    width: 70%;
+    background: #b0be6e;
+}
+
+.devicon-c-plain:hover {
+    color: #6856C2;
+}
+
+#lang-azure::after {
+    width: 20%;
+    background: #e79a69;
+}
+
+.devicon-azure-plain:hover {
+    color: #0081D8;
+}
+
+#lang-bash::after {
+    width: 80%;
+    background: #94bd77;
+}
+
+.devicon-bash-plain:hover {
+    color: #3B484A;
+}
+
+#lang-cmake::after {
+    width: 15%;
+    background: #e5926b;
+}
+
+.devicon-cmake-plain:hover {
+    color: #00A846;
+}
+
+#lang-css::after {
+    width: 75%;
+    background: #a4c073;
+}
+
+.devicon-css3-plain:hover {
+    color: #4C00E6;
+}
+
+#lang-dotnet::after {
+    width: 30%;
+    background: #e6ad61;
+}
+
+.devicon-dotnetcore-plain:hover {
+    color: #7200D6;
+}
+
+#lang-md::after {
+    width: 90%;
+    background: #73b87e;
+}
+
+.devicon-markdown-original:hover {
+    color: #000000;
+}
