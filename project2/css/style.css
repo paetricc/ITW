@@ -1,20 +1,34 @@
+/**************************************** ZAČÁTEK SOUBORU style.css ****************************************/
+
+/*******************************
+*
+* Projekt: Projekt 2 ITW
+* Autor: Tomáš Bártů, xbartu11
+* Datom: 2022-04-21
+*
+********************************/
+
 html {
     scroll-behavior:    smooth;
     scroll-padding-top: 50px;
 }
 
 body {
-    margin:  0;
-    padding: 0;
+    margin:      0;
+    padding:     0;
     font-family: 'Courier New', Courier, monospace;
 }
+
+/*******************************/
+/*  Zacátek obecného nastavení */
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 
 a {
     text-decoration: none;
     transition:      color .3s ease-in-out, box-shadow .3s ease-in-out;
-    position: relative;
-    padding:  1em;
+    position:        relative;
+    padding:         1em;
 }
 
 a:link,
@@ -22,44 +36,63 @@ a:visited {
     color: aliceblue;
 }
 
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
 ul a::before {
-    transform: scaleX(0);
-    content:   '';
-    position:  absolute;
-    width:     100%;
-    height:    2px;
+    /* Díky nulovému scalu se čára nezobrazí */
+    transform:        scaleX(0);
+    content:          '';
+    position:         absolute;
+    /* Rozměr čáry a barva */
+    width:            100%;
+    height:           2px;
     border-radius:    2px;
     background-color: aliceblue;
-    transform-origin: bottom;
+
     transition:       transform .2s linear;
-    left:   0;
-    bottom: 0;
+    /* Čára bude pozicována vlevo dole */
+    left:             0;
+    bottom:           0;
 }
 
 ul a:hover::before {
+    /* Zobrazíme čárů s počátkem animace ve středu */
     transform:        scaleX(1);
-    transform-origin: bottom;
+    transform-origin: center;
 }
 
 i {
     font-size: 40px;
 }
 
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+/* Konec obecného nastavení */
+/****************************/
+
 /***************************/
 /*  Zacátek úvodní stránky */
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 header {
-    background-image: url(./../img/happyStudent.jpg);
-    background-color: #c89666;
+    background-image:      url(./../img/happyStudent.jpg);
+    /* pokud se nezobrazí, tak je nastavena defaultní barva */
+    background-color:      #c89666;
+    /* jednotlivé proporce pozadí (zůstane fixní) */
     background-attachment: fixed;
     background-size:       cover;
     background-position:   center;
-    min-height: 400px;
-    height:     100vh;
+    min-height:            400px;
+    height:                100vh;
 }
 
 #navbar {
+    /* přesuneme menu do popředí */
     z-index:    2;
     position:   fixed;
     width:      100%;
@@ -67,7 +100,9 @@ header {
 }
 
 nav ul {
+    /* nebude mezera mezi položkami */
     font-size:   0;
+
     white-space: nowrap;
     padding:     0;
     max-width:   1200px;
@@ -76,21 +111,26 @@ nav ul {
 }
 
 nav ul li {
-    display:   inline-block;
-    border:    1px solid transparent;
-    font-size: 2.4vh;
-    padding:   1em 0;
+    display:        inline-block;
+    border:         1px solid transparent;
+    /* musíme znuvu nastavit velikost (velikost bude nastavena podle výšky viewportu) */
+    font-size:      2.4vh;
+    padding:        1em 0;
     text-transform: uppercase;
+    /* mezera mezi písmeny */
     letter-spacing: .05em;
 }
 
 #hamburger {
+    /* dokud se šířka stránky nebude nacházet pod určitou mezí, tak nechceme zobrazit ikonu menu */
     display:     none;
     position:    absolute;
+    /* rozměry, takové aby na různých zařízeních ikona byla čitelná */
     font-size:   2.3vh;
     padding-top: 2vh;
-    top:   0;
-    right: 0;
+
+    top:         0;
+    right:       0;
 }
 
 #hamburger a:hover {
@@ -98,14 +138,17 @@ nav ul li {
 }
 
 #title {
-    display:    block;
-    position:   relative;
-    top:        66vh;
-    padding:    1em 1em 1em 10vh;
-    font-size:  2vw;
-    float:      left;
-    transition: ease all .5s;
+    /* napozicování elementu */
+    display:          block;
+    position:         relative;
+    float:            left;
+    top:              66vh;
+    padding:          1em 1em 1em 10vh;
+    /* font se bude zmenšovat se šířkou stránky */
+    font-size:        2vw;
+    transition:       ease all .5s;
     background-color: #112D32;
+    /* zaoblení po pravé straně */
     border-radius:    0 20px 20px 0;
     font-family:      'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -124,6 +167,7 @@ nav ul li {
 
 
 .content {
+    /* šířka obsahu bude maximálně 1200px */
     max-width: 1200px;
     margin:    auto;
 }
@@ -137,7 +181,7 @@ nav ul li {
 }
 
 .section:nth-child(even) {
-    background-color: gray;
+    background-color: #9b9b9b;
 }
 
 /***************************/
@@ -159,9 +203,9 @@ nav ul li {
 }
 
 #about_img img {
-    display: block;
-    margin:  auto;
-    width:   75%;
+    display:       block;
+    margin:        auto;
+    width:         75%;
     transition:    all .5s ease;
     border-radius: 20px;
 }
@@ -179,12 +223,12 @@ nav ul li {
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 #education .content {
-    display: grid;
+    display:             grid;
     grid-template-areas: "head head" "text1 img" "text2 text3";
-    align-items: center;
-    justify-items: center;
-    column-gap: 1rem;
-    row-gap: 1rem;
+    align-items:         center;
+    justify-items:       center;
+    column-gap:          1rem;
+    row-gap:             1rem;
 }
 
 #education h2 {
@@ -204,9 +248,9 @@ nav ul li {
 }
 
 #education img {
-    display: block;
-    margin: auto;
-    width: 90%;
+    display:    block;
+    margin:     auto;
+    width:      90%;
     transition: all .5s ease;
 }
 
@@ -223,15 +267,16 @@ nav ul li {
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 #skills .content {
-    display: grid;
+    display:             grid;
     grid-template-areas: "head" "text";
-    justify-items: center;
+    justify-items:       center;
 }
 
+/* třísloupcové rozložení */
 #languages {
-    display: grid;
+    display:             grid;
     grid-template-areas: "text text text";
-    column-gap: 1rem;
+    column-gap:          1rem;
 }
 
 .lang-item {
@@ -239,32 +284,40 @@ nav ul li {
 }
 
 .lang-item i {
-    float: left;
-    padding: .5rem;
-    transition: all .3s linear;
+    float:         left;
+    font-size:     2rem;
+    transition:    all .3s linear;
+    padding-right: 0.5rem;
+}
+
+.lang-item h2 {
+    margin-top: 0;
 }
 
 progress {
     position: relative;
-    width: 300px;
+    width:    300px;
 }
 
 progress::after, progress::before {
-    content: "";
-    height: 50%;
-    position: absolute;
+    /* Pozice a rozměry progress baru */
+    content:       "";
+    height:        60%;
+    position:      absolute;
     border-radius: 10px;
 }
 
+/* umístění vnitřního progress baru */
 progress::after {
-    top: 4px;
+    top:  4px;
     left: 4px;
 }
 
 progress::before {
-    width: 100%;
+    width:      100%;
     background: #12343b;
-    padding: 4px;
+    /* Použijeme vycpávku, tak aby se vnější progress bar opticky zvětšil */
+    padding:    4px;
     transition: all .2s ease-in-out;
 }
 
@@ -289,54 +342,49 @@ progress:hover::before {
     text-align: center;
 }
 
+/* Navigační menu v sekce */
 #hobbies ul {
-    display: block;
-    font-size: 0;
-    padding: 0;
-    text-align: center;
+    display:          block;
+    font-size:        0;
+    padding:          0;
+    text-align:       center;
     background-color: black;
-    margin: auto -1rem;
+    /* -1rem, tak aby se zanedbalo odsazení .content od okraje stránky */
+    margin:           auto -1rem;
 }
 
 #hobbies ul li {
-    padding: 1em;
+    padding:   1em;
     font-size: 2.4vh;
-    display: inline-block;
+    display:   inline-block;
 }
 
 #hobbies h3 {
     padding-top: 3rem;
 }
 
+/* každá druhá podsekce bude mít jiné pozadím, kvůli lepší vizualizaci */
 #hobbies .sub-section:nth-child(even) {
-    background-color: #999999;
-    border-radius: 20px;
+    background-color: #b9b9b9;
+    border-radius:    20px;
 }
 
 #hobbies .sub-section {
-    display: grid;
-    column-gap: 1rem;
-    justify-items: center;
-    align-items: center;
+    display:        grid;
+    column-gap:     1rem;
+    justify-items:  center;
+    align-items:    center;
     padding-bottom: 2rem;
 }
 
+/* obrázek u každé liché podsekce se bude nacházet napravo a text nalevo */
 #hobbies .sub-section:nth-child(odd) {
     grid-template-areas: "head head" "text img";
 }
 
+/* obrázek u každé sudé podsekce se bude nacházet nalevo a text napravo */
 #hobbies .sub-section:nth-child(even) {
     grid-template-areas: "head head" "img text";
-}
-
-#hobbies h3 {
-    grid-area: head;
-    margin-top: 0;
-}
-
-#hobbies p {
-    grid-area: text;
-    text-align: justify;
 }
 
 #hobbies .sub-section:nth-child(odd) p {
@@ -347,12 +395,22 @@ progress:hover::before {
     padding-right: 1rem;
 }
 
+#hobbies h3 {
+    grid-area:  head;
+    margin-top: 0;
+}
+
+#hobbies p {
+    grid-area:  text;
+    text-align: justify;
+}
+
 #hobbies img {
-    grid-area: img;
-    width: 95%;
+    grid-area:     img;
+    width:         95%;
     border-radius: 20px;
-    border: 1px solid black;
-    transition: all .5s ease;
+    border:        1px solid black;
+    transition:    all .5s ease;
 }
 
 #hobbies img:hover {
@@ -372,12 +430,11 @@ progress:hover::before {
 }
 
 #films .content {
-    display: grid;
+    display:             grid;
     grid-template-areas: "head head" "icon icon";
-    justify-items: center;
-    align-items: center;
-    column-gap: 1rem;
-    row-gap: 1rem;
+    justify-items:       center;
+    column-gap:          1rem;
+    row-gap:             1rem;
 }
 
 #films h2 {
@@ -393,11 +450,12 @@ progress:hover::before {
 }
 
 table {
-    width: 100%;
+    width:           100%;
     border-collapse: collapse;
-    text-align: left;
-    vertical-align: center;
-    border: 1px solid black;
+    text-align:      left;
+    vertical-align:  center;
+    border:          1px solid black;
+    margin-top:      5rem;
 }
 
 table thead {
@@ -423,20 +481,20 @@ table td:last-child {
 
 table i {
     padding-left: 0.2rem;
-    font-size: 15px;
+    font-size:    15px;
 }
 
 .film img {
-    display: block;
-    width: 90%;
-    height: auto;
-    margin: auto;
+    display:    block;
+    width:      90%;
+    height:     auto;
+    margin:     auto;
     transition: all .2s ease-in;
 }
 
 /* Simulace nadzvednutí plakátu */
 .film img:hover {
-    width: 91%;
+    width:      91%;
     box-shadow: #bfbfbf 15px 15px 15px;
 }
 
@@ -450,8 +508,8 @@ table i {
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 footer {
-    background-color: #c89666;
-    text-align: center;
+    background-color: #e1b382;
+    text-align:       center;
 }
 
 footer p {
@@ -464,12 +522,28 @@ footer a:hover {
 
 footer p i {
     font-size: 14px;
-    padding: 1rem;
+    padding:   1rem;
+}
 
+footer .section {
+    padding-bottom: 0;
+}
+
+#phones {
+    padding-bottom: 2rem;
+}
+
+footer span i {
+    font-size: 1rem;
 }
 
 #contact_icons i:not(:last-child) {
     padding-right: 15px;
+}
+
+#copyright {
+    background-color: #c89666;
+    margin: 1rem -1rem 0 -1rem;
 }
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
@@ -479,7 +553,7 @@ footer p i {
 @media screen and (max-width: 1023px) {
     #hamburger {
         display: block;
-        color: aliceblue;
+        color:   aliceblue;
     }
 
     #languages {
@@ -499,15 +573,19 @@ footer p i {
     }
 }
 
+/***************************/
+/*  Zacátek media queries  */
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
 @media screen and (max-height: 800px) {
     nav ul li {
         font-size: 19px;
     }
 
     #hamburger {
-        padding-top: 10px;
+        padding-top:   10px;
         padding-right: 10px;
-        font-size: 19px;
+        font-size:     19px;
     }
 }
 
@@ -547,3 +625,9 @@ footer p i {
         padding: 0 1rem;
     }
 }
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+/*  Konec media queries  */
+/*************************/
+
+/**************************************** KONEC SOUBORU style.css ****************************************/
