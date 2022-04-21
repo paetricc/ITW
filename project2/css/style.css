@@ -530,7 +530,11 @@ footer .section {
 }
 
 #phones {
-    padding-bottom: 2rem;
+    width:                 400px;
+    margin:                auto;
+    padding-bottom:        2rem;
+    display:               grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 footer span i {
@@ -543,7 +547,7 @@ footer span i {
 
 #copyright {
     background-color: #c89666;
-    margin: 1rem -1rem 0 -1rem;
+    margin:           1rem -1rem 0 -1rem;
 }
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
@@ -623,6 +627,12 @@ footer span i {
 
     #hobbies p {
         padding: 0 1rem;
+    }
+
+    #phones {
+        grid-template-columns: 1fr;
+        grid-template-rows:    1fr 1fr;
+        row-gap:               1rem;
     }
 }
 
