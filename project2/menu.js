@@ -6,7 +6,6 @@ const navbar = document.getElementById("navbar");
 const menu = document.getElementById("ul");
 const as = document.querySelectorAll("#navbar ul a");
 const list = document.getElementsByClassName("list");
-const aaa = document.getElementsByClassName("section")
 
 // přidání event listenerů
 document.getElementById('hamburger').addEventListener('click', hide);
