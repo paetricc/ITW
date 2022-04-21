@@ -456,6 +456,7 @@ table {
     vertical-align:  center;
     border:          1px solid black;
     margin-top:      5rem;
+    transition: all .3s ease;
 }
 
 table thead {
@@ -467,9 +468,18 @@ table tbody tr:nth-child(odd) {
     background-color: #e1b382;
 }
 
+table tbody tr:nth-child(odd):hover {
+    background-color: #ffca93;
+}
+
 table tbody tr:nth-child(even) {
     background-color: #e8cbaa;
 }
+
+table tbody tr:nth-child(even):hover {
+    background-color: #ffe0ba;
+}
+
 
 table td {
     padding: 0.5rem;
