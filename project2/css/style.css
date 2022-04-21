@@ -22,6 +22,25 @@ a:visited {
     color: aliceblue;
 }
 
+ul a::before {
+    transform: scaleX(0);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: aliceblue;
+    transform-origin: bottom;
+    transition: transform .2s linear;
+    left: 0;
+    bottom: 0;
+}
+
+ul a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom;
+}
+
 i {
     font-size: 40px;
 }
@@ -38,25 +57,6 @@ header {
     background-position: center;
     min-height: 400px;
     height: 100vh;
-}
-
-#navbar ul a::before {
-    transform: scaleX(0);
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    border-radius: 2px;
-    background-color: aliceblue;
-    transform-origin: bottom;
-    transition: transform .2s linear;
-    left: 0;
-    bottom: 0;
-}
-
-#navbar a:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom;
 }
 
 #navbar {
@@ -114,6 +114,10 @@ nav ul li {
     padding: 1em;
 }
 
+#title:hover{
+    background-color: #2d545e;
+}
+
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 /* Konec úvodní stránky */
 /************************/
@@ -126,6 +130,10 @@ nav ul li {
 
 .section {
     padding: 3rem 1rem;
+}
+
+.section:not(:last-child) {
+    background-color: whitesmoke;
 }
 
 .section:nth-child(even) {
@@ -198,12 +206,12 @@ nav ul li {
 #education img {
     display: block;
     margin: auto;
-    width: 75%;
+    width: 90%;
     transition: all .5s ease;
 }
 
 #education img:hover {
-    width: 90%;
+    width: 100%;
 }
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
@@ -273,9 +281,93 @@ progress:hover::before {
 /* Konec sekce skills */
 /**********************/
 
+/*************************/
+/* Zacátek sekce hobbies */
+/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+#hobbies h2 {
+    text-align: center;
+}
+
+#hobbies ul {
+    display: block;
+    font-size: 0;
+    padding: 0;
+    text-align: center;
+    background-color: black;
+    margin: auto -1rem;
+}
+
+#hobbies ul li {
+    padding: 1em;
+    font-size: 2.4vh;
+    display: inline-block;
+}
+
+#hobbies h3 {
+    padding-top: 3rem;
+}
+
+#hobbies .content div:nth-child(even) {
+    background-color: lightgray;
+}
+
+#hobbies .content div {
+    display: grid;
+    column-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+#hobbies .content div:nth-child(odd) {
+    grid-template-areas: "head head" "text img";
+}
+
+#hobbies .content div:nth-child(even) {
+    grid-template-areas: "head head" "img text";
+}
+
+#hobbies h3 {
+    grid-area: head;
+}
+
+#hobbies p {
+    grid-area: text;
+    text-align: justify;
+}
+
+#hobbies .content:nth-child(even) div p {
+    padding-left: 1rem;
+}
+
+#hobbies .content:nth-child(odd) div p {
+    padding-right: 1rem;
+}
+
+#hobbies img {
+    grid-area: img;
+    width: 95%;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: all .5s ease;
+}
+
+#hobbies img:hover {
+    width: 100%;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+/* Konec sekce hobbies */
+/***********************/
+
 /************************/
 /* Zacátek sekce films  */
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+.film {
+    text-align: center;
+}
 
 #films .content {
     display: grid;
@@ -291,19 +383,45 @@ progress:hover::before {
 }
 
 #films i {
+    color: #ffe835;
     grid-area: icon;
 }
+#film_rating p {
+    text-align: justify;
+}
 
-.film {
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    vertical-align: center;
+    border: 1px solid black;
+}
+
+table thead {
+    background-color: #c89666;
+    border-bottom: 2px solid black;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #e1b382;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #e8cbaa;
+}
+
+table td {
+    padding: 0.5rem;
+}
+
+table td:nth-child(even) {
     text-align: center;
 }
 
-#contact_icons {
-    padding: 1rem;
-}
-
-#contact_icons i:not(:last-child) {
-    padding-right: 15px;
+table i {
+    padding-left: 0.2rem;
+    font-size: 15px;
 }
 
 .film img {
@@ -345,7 +463,12 @@ footer a:hover {
 
 footer p i {
     font-size: 14px;
-    padding-right: 5px;
+    padding: 1rem;
+
+}
+
+#contact_icons i:not(:last-child) {
+    padding-right: 15px;
 }
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
@@ -371,7 +494,7 @@ footer p i {
     }
 
     html {
-        min-width: 400px;
+        min-width: 340px;
     }
 }
 
@@ -402,7 +525,24 @@ footer p i {
     #films .content {
         grid-template-areas: "head" "icon";
     }
+
     #languages {
         grid-template-areas: "text";
+    }
+
+    #hobbies .content div:nth-child(odd) {
+        grid-template-areas: "head" "text" "img";
+    }
+
+    #hobbies .content div:nth-child(even) {
+        grid-template-areas: "head" "text" "img";
+    }
+
+    #hobbies ul li {
+        display: block;
+    }
+
+    #hobbies p {
+        padding: 0 1rem;
     }
 }
