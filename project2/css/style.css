@@ -585,6 +585,10 @@ footer span i {
     html {
         min-width: 340px;
     }
+
+    #films .content {
+        grid-template-areas: "head" "icon";
+    }
 }
 
 /***************************/
@@ -613,10 +617,6 @@ footer span i {
 
     #education .content {
         grid-template-areas: "head" "text1" "text2" "img" "text3";
-    }
-
-    #films .content {
-        grid-template-areas: "head" "icon";
     }
 
     #languages {
