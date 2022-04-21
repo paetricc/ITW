@@ -308,12 +308,12 @@ progress:hover::before {
     padding-top: 3rem;
 }
 
-#hobbies .content div:nth-child(even) {
+#hobbies .sub-section:nth-child(even) {
     background-color: #999999;
     border-radius: 20px;
 }
 
-#hobbies .content div {
+#hobbies .sub-section {
     display: grid;
     column-gap: 1rem;
     justify-items: center;
@@ -321,16 +321,17 @@ progress:hover::before {
     padding-bottom: 2rem;
 }
 
-#hobbies .content div:nth-child(odd) {
+#hobbies .sub-section:nth-child(odd) {
     grid-template-areas: "head head" "text img";
 }
 
-#hobbies .content div:nth-child(even) {
+#hobbies .sub-section:nth-child(even) {
     grid-template-areas: "head head" "img text";
 }
 
 #hobbies h3 {
     grid-area: head;
+    margin-top: 0;
 }
 
 #hobbies p {
@@ -338,11 +339,11 @@ progress:hover::before {
     text-align: justify;
 }
 
-#hobbies .content:nth-child(even) div p {
+#hobbies .sub-section:nth-child(odd) p {
     padding-left: 1rem;
 }
 
-#hobbies .content:nth-child(odd) div p {
+#hobbies .sub-section:nth-child(even) p {
     padding-right: 1rem;
 }
 
@@ -451,7 +452,6 @@ table i {
 footer {
     background-color: #c89666;
     text-align: center;
-    padding: 1rem 0;
 }
 
 footer p {
@@ -531,11 +531,11 @@ footer p i {
         grid-template-areas: "text";
     }
 
-    #hobbies .content div:nth-child(odd) {
+    #hobbies .sub-section:nth-child(odd) {
         grid-template-areas: "head" "text" "img";
     }
 
-    #hobbies .content div:nth-child(even) {
+    #hobbies .sub-section:nth-child(even) {
         grid-template-areas: "head" "text" "img";
     }
 
