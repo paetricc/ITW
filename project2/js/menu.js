@@ -32,10 +32,10 @@ function click() {
         // Aby se správně skrývalo navigační menu při kliknutí na HOME
         if (width <= 1023) {
             if (lever) {
-                hide()
-                hide()
+                hide();
+                hide();
             } else {
-                hide()
+                hide();
             }
         }
     } else {
