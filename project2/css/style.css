@@ -640,9 +640,14 @@ footer span i {
     }
 
     #phones {
+        max-width: 50vw;
         grid-template-columns: 1fr;
         grid-template-rows:    1fr 1fr;
         row-gap:               1rem;
+    }
+
+    footer p {
+        padding-bottom: 0.5rem;;
     }
 }
 
